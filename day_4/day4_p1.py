@@ -23,17 +23,11 @@ sum = 0
 for assignment in assignments:
     sections = get_sections(assignment=assignment)
     start_1 = int(sections[0][0])
-    print(start_1)
     end_1 = int(sections[0][1])
-    print(end_1)
     start_2 = int(sections[1][0])
-    print(start_2)
     end_2 = int(sections[1][1])
-    print(end_2)
     set_1 = set(range(start_1, end_1+1))
-    print(set_1)
     set_2 = set(range(start_2, end_2+1))
-    print(set_2)
     total = is_in_range(set_1=set_1, set_2=set_2)
     sum += total
 
