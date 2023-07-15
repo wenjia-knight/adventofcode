@@ -13,7 +13,7 @@ def get_sections(assignment:str) -> tuple:
 
 def is_in_range(set_1:set, set_2:set) -> int:
     total_num = 0
-    if set_1.issubset(set_2) or set_2.issubset(set_1):
+    if len(set_1.intersection(set_2))>0:
         total_num += 1
     return total_num
 
