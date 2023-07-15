@@ -29,7 +29,7 @@ def parse_instruction(instruction):
     a = int(numbers[0])
     b = int(numbers[1])
     c = int(numbers[2])
-    return a,b,c
+    return (a,b,c)
 
 def move_crate(crate_stacks,instruction):
     #move 1 from 2 to 1#
