@@ -20,7 +20,7 @@ def move_crate(crate_stacks: list, move_instruction: tuple) -> list:
     from_index = move_instruction[1] - 1
     to_index = move_instruction[2] - 1
     new_stack = crate_stacks[from_index][0:(-how_many_boxes_to_move)]
-    boxes_to_be_moved = reversed(crate_stacks[from_index][len(crate_stacks[from_index])-how_many_boxes_to_move:])
+    boxes_to_be_moved = crate_stacks[from_index][len(crate_stacks[from_index])-how_many_boxes_to_move:]
     crate_stacks[to_index].extend(boxes_to_be_moved)
     crate_stacks[from_index] = new_stack
     return crate_stacks

@@ -1,4 +1,4 @@
-from day_5_p1 import steps_of_move, move_crate, move_crates, top_crates
+from day_5_p2 import steps_of_move, move_crate, move_crates, top_crates
 import unittest 
 import pytest 
 
@@ -32,7 +32,7 @@ def test_move_crates():
         ['Z','N'],['M','C','D'],['P']  
     ]
     instructions = ['move 1 from 2 to 1','move 3 from 1 to 3','move 2 from 2 to 1','move 1 from 1 to 2']
-    expected_crates = [['C'],['M'],['P','D','N','Z']]
+    expected_crates = [['M'],['C'],['P','Z','N','D']]
 
     # WHEN
     actual_crates = move_crates(crate_stacks=crate_stacks, move_instructions=instructions)
